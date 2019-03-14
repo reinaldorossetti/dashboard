@@ -16,9 +16,9 @@ var bodyParser=require("body-parser");
 // conecta com o banco de dados, precisa cria o mesmo e as tabelas.
 var connection = mysql.createConnection({
               host     : 'localhost',
-              user     : 'rootxxx',
-              password : 'xxx',
-              database : 'automacaoxxx'
+              user     : 'root',
+              password : 'root',
+              database : 'automacaodb'
             });
  
 connection.connect();
