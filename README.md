@@ -1,4 +1,4 @@
-# spread_dashboardjs
+# dashboardjs
 Modelo Simples de Dashboard em JavaScript.
 
 
