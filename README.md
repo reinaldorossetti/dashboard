@@ -4,7 +4,7 @@ Modelo Simples de Dashboard em JavaScript.
 
 ##Passos Pra Iniciar o Projeto:
 
-1. Antes de tudo precisamos instalar e configurar o banco de dados;
+1. Antes de tudo precisamos instalar e configurar o banco de dados temos duas tabalas em users.sql;
 2. Baixar o Projeto do Github;
 3. Via console com modo "administrador", entrar na pasta do projeto;
 4. Digitar "npm install" sem aspas, para instalar as dependências do Projeto;
