@@ -1,0 +1,64 @@
+<html lang="en">
+    <div class="container-fluid" wfd-id="0">
+        <div class="row" wfd-id="1">
+                <hr>
+                <%- include header %>
+                <!-- Main component for a primary marketing message or call to action -->
+                   <div class="jumbotron">
+                     <h1>Bem-Vindo!</h1>
+                     <p>Status dos Chamados</p>
+                     <table id="bootstrap-table" string="Chamados" cellpadding="7" cellspacing="7" class="table table-striped table-hover">
+                       <tr>
+                         <th scope="col">Id</th>
+                         <th scope="col">Numero do Chamado</th>
+                         <th scope="col">Data Transferência</th>
+                         <th scope="col">Status</th>
+                         <th scope="col">Data Fechamento</th>
+                       </tr>
+                       <% if(dataf.length){ 
+                         for(var i = 0;i < dataf.length;i++) { 
+                           (i+1)
+                           %>
+                       <tr>
+                         <td><%=i+1%></td>
+                         <td><%=dataf[i].num_chamado%></td>
+                         <td><%=dataf[i].data_transferencia%></td>
+                         <td><%=dataf[i].status%></td>
+                         <td><%=dataf[i].data_fechamento%></td>
+                       </tr>
+                       <% }
+                       }else{ %>
+                       <tr>
+                         <td colspan="3">No user</td>
+                       </tr>
+                     <% } %>
+                     </table>
+                     <script type="text/javascript">
+                     $(document).ready(function(){
+                       /* default charset encoding (UTF-8) */
+                       TableExport.prototype.charset = "charset=utf-8";
+                       /* default `filename` property if "id" attribute is unset */
+                       TableExport.prototype.defaultFilename = "Chamados";
+                       $("table").tableExport.charset = "charset=utf-8";
+                       ExportTable();
+                       function ExportTable(){
+                             $("table").tableExport({
+                             headings: true,                    // (Boolean), display table headings (th/td elements) in the <thead>
+                             footers: true,                     // (Boolean), display table footers (th/td elements) in the <tfoot>
+                             formats: ["xls", "xlsx"],    // (String[]), filetypes for the export
+                             fileName: "Chamados",                    // (id, String), filename for the downloaded file
+                             bootstrap: true,                   // (Boolean), style buttons using bootstrap
+                             position: "well" ,                // (top, bottom), position of the caption element relative to table
+                             ignoreRows: null,                  // (Number, Number[]), row indices to exclude from the exported file
+                             ignoreCols: null,                 // (Number, Number[]), column indices to exclude from the exported file
+                             ignoreCSS: ".tableexport-ignore",   // (selector, selector[]), selector(s) to exclude from the exported file
+                             charset: "charset=utf-8"
+                           });
+                           }
+                     });      
+                   </script>
+                   </div>
+                 <%- include footer %>
+        </div>
+    </div>
+   
