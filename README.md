@@ -13,6 +13,6 @@ Modelo Simples de Dashboard em JavaScript.
 
 ##Ferramentas que devem ser instaladas:
 
-1. Mysql (Deve criar o Banco de Dados com o nome "automacaodb");
+1. Mysql (Deve criar o Banco de Dados com o nome "automacaodb", usario e senha do banco tem que ser mudado no app depois em app.js, após definir a seu senha de banco de dados);
 2. Nodejs;
 3. Git;
